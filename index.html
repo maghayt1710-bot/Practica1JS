@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cupones Personalizados</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(
+        135deg,
+        #192584,
+        #4FD2E9,
+        #B541FA
+      );
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .login-container {
+      width: 380px;
+      padding: 35px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+    .login-container h1 {
+      margin-bottom: 10px;
+      color: #192584;
+    }
+    .login-container p {
+      color: #74706D;
+      margin-bottom: 25px;
+    }
+
+    .campo {
+      text-align: left;
+      margin-bottom: 18px;
+    }
+    .campo label {
+      display: block;
+      margin-bottom: 7px;
+      font-weight: bold;
+      color: #192584;
+    }
+    .campo input,
+    .campo select {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #4FD2E9;
+      border-radius: 10px;
+      font-size: 16px;
+      outline: none;
+    }
+    .campo input:focus,
+    .campo select:focus {
+      border-color: #B541FA;
+    }
+    button {
+      width: 100%;
+      padding: 13px;
+      border: none;
+      border-radius: 10px;
+      background: #B541FA;
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #192584;
+      transform: scale(1.02);
+    }
+    #resultado {
+      margin-top: 25px;
+    }
+
+    #resultado h2 {
+      color: #192584;
+    }
+
+    #resultado strong {
+      color: #B541FA;
+    }
+
+    #resultado img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 15px;
+      margin-top: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    }
+    .oculto {
+      display: none;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Bienvenid@</h1>
+    <p>Ingresa tus datos para obtener tu cupón</p>
+    <form id="formulario">
+      <div class="campo">
+        <label for="nombre">Nombre</label>
+        <input
+          type="text"
+          id="nombre"
+          placeholder="Ingresa tu nombre"
+          required
+        >
+      </div>
+      <div class="campo">
+        <label for="edad">Edad</label>
+        <input
+          type="number"
+          id="edad"
+          placeholder="Ingresa tu edad"
+          min="1"
+          required
+        >
+      </div>
+
+
+      <div class="campo">
+        <label for="genero">Género</label>
+        <select id="genero" required>
+          <option value="">Selecciona una opción</option>
+          <option value="femenino">
+            Femenino
+          </option>
+          <option value="masculino">
+            Masculino
+          </option>
+        </select>
+
+      </div>
+
+
+      <button type="submit">
+        Obtener mi cupón
+      </button>
+
+    </form>
+
+
+    <div id="resultado"></div>
+
+  </div>
+  <script src="funciones.JS"></script>
+
+</body>
+</html>
